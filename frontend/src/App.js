@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
+=======
+// src/App.js
+import React from "react";
+import MessageForm from "./components/MessageForm";
+>>>>>>> development
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +25,9 @@ function App() {
           Learn React
         </a>
       </header>
+=======
+      <MessageForm />
+>>>>>>> development
     </div>
   );
 }
