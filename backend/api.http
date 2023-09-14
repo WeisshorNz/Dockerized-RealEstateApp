@@ -1,0 +1,23 @@
+### Create a message
+POST  http://localhost:3001/message
+Content-Type: application/json
+
+{
+    "message": "Hello World!"
+}
+
+### Delete a message
+DELETE http://localhost:3001/message/
+### Get all Messages
+GET http://localhost:3001/message/
+
+### Modify Message
+PATCH http://localhost:3001/message/6502562f2504fdb6e19709c2
+Content-Type: application/json
+
+{
+    "message": "Hello"
+}
+
+### Get a single Message
+GET http://localhost:3001/message/6502562f2504fdb6e19709c2
