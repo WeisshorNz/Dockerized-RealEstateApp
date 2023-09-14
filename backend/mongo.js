@@ -1,13 +1,11 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
-  // Connect to MongoDB using the provided URI and options
   mongoose
     .connect(process.env.MONGODB_URI, {
       dbName: process.env.DB_NAME,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      // useFindAndModify: false,
     })
     .then(() => {
       console.log("MongoDB connected...");
