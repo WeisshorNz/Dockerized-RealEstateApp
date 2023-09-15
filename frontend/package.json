@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "frontend",
+=======
   "name": "m5-react-app",
+>>>>>>> development
   "version": "0.1.0",
   "private": true,
   "dependencies": {
