@@ -1,11 +1,11 @@
 // src/App.js
 import React from "react";
-import MessageForm from "./components/MessageForm";
+import { MainPage } from "../src/components/pages/MainPage";
 
 function App() {
   return (
-    <div className="App">
-      <MessageForm />
+    <div className="bg-white min-h-screen">
+      <MainPage />
     </div>
   );
 }
