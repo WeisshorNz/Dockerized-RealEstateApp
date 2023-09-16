@@ -1,12 +1,10 @@
 import React from "react";
-// import MessageForm from "./components/MessageForm";
+import SearchPage from "./components/pages/SearchPage";
 
 function App() {
   return (
     <div className="App">
-      {/* <MessageForm /> */}
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <span class="text-teal-600 bg-teal-500">Admin</span>
+      <SearchPage />;
     </div>
   );
 }
