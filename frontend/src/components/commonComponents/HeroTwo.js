@@ -13,12 +13,12 @@ export const HeroTwo = () => {
 
         <div>
           <h2 className="text-4xl font-bold mb-4">Who we are</h2>
-          <p className="mb-6">"We make it easy for tenants and landlords"</p>
+          <p className="mb-6">We make it easy for tenants and landlords</p>
           <p className="mb-8">
-            "We have built our reputation as true local area experts. We have
+            We have built our reputation as true local area experts. We have
             gained more knowledge about buyer interests, our neighborhood and
             the market than any other brand because we live locally and work for
-            local people."
+            local people.
           </p>
           <div className="flex space-x-4">
             <button className="btn btn-primary">For tenants</button>
