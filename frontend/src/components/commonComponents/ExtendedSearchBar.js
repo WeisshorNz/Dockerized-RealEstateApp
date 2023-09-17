@@ -30,7 +30,7 @@ const ExtendedSearchBar = () => {
   const handleSearchClick = () => {
     const dbRequest = [];
     if (selectedSuburb !== null) {
-      dbRequest.push({ "Suburb": selectedSuburb });
+      dbRequest.push({ Suburb: selectedSuburb });
     }
     if (selectedType !== null) {
       dbRequest.push({ Type: selectedType });
@@ -51,8 +51,9 @@ const ExtendedSearchBar = () => {
   };
 
   return (
-    <div className="flex justify-center items-center ">
-      <div className="navbar mt-8 mb-12 w-2/3 flex justify-between shadow-2xl">
+    <div className="flex justify-center items-center">
+      {/* <div className="navbar mt-8 mb-12 w-2/3 flex justify-between shadow-2xl"> */}
+      <div className="navbar mt-8 mb-12  sm:w-2/3 flex justify-between shadow-2xl p-1 border">
         <div className="flex-1 px-2 lg:flex-none">
           <input
             type="text"

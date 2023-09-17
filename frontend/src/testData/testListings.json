@@ -6,7 +6,7 @@
     "bedrooms": "3+",
     "bathrooms": "2+",
     "pets": false,
-    "image":"/images/listings/b1.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070617224.jpg"
   },
     {
     "propertyType": "House",
@@ -15,7 +15,7 @@
     "bedrooms": "3+",
     "bathrooms": "2+",
     "pets": true,
-    "image":"/images/listings/b2.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070618341.jpg"
   },
     {
     "propertyType": "House",
@@ -24,7 +24,7 @@
     "bedrooms": "3+",
     "bathrooms": "2+",
     "pets": false,
-    "image":"/images/listings/b3.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070615780.jpg"
   },
       {
     "propertyType": "House",
@@ -33,7 +33,7 @@
     "bedrooms": "3+",
     "bathrooms": "2+",
     "pets": false,
-    "image":"/images/listings/b4.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070614471.jpg"
   },
       {
     "propertyType": "House",
@@ -42,7 +42,7 @@
     "bedrooms": "3+",
     "bathrooms": "2+",
     "pets": false,
-    "image":"/images/listings/b5.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070664784.jpg"
   },
       {
     "propertyType": "House",
@@ -51,7 +51,7 @@
     "bedrooms": "4+",
     "bathrooms": "3+",
     "pets": false,
-    "image":"/images/listings/b6.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070668398.jpg"
   },
     {
     "propertyType": "House",
@@ -60,7 +60,7 @@
     "bedrooms": "3+",
     "bathrooms": "1+",
     "pets": true,
-    "image":"/images/listings/b7.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070671974.jpg"
   },
     {
     "propertyType": "House",
@@ -69,7 +69,7 @@
     "bedrooms": "2+",
     "bathrooms": "1+",
     "pets": true,
-    "image":"/images/listings/b8.png"
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070683800.jpg"
   },
      {
     "propertyType": "House",
@@ -78,7 +78,7 @@
     "bedrooms": "4+",
     "bathrooms": "3+",
     "pets": true,
-    "image":"/images/listings/b9.png"
-  },
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2069586134.jpg"
+  }
   
 ]
