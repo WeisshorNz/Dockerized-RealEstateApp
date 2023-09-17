@@ -1,11 +1,10 @@
-// src/App.js
 import React from "react";
-import { MainPage } from "../src/components/pages/MainPage";
+import SearchPage from "./components/pages/SearchPage";
 
 function App() {
   return (
-    <div className="bg-white min-h-screen">
-      <MainPage />
+    <div className="App">
+      <SearchPage />;
     </div>
   );
 }

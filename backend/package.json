@@ -1,4 +1,17 @@
 {
+<<<<<<< HEAD
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Node aplication that connects to a Mongo db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis R. & Alan S.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+=======
   "name": "week1mission5",
   "version": "1.0.0",
   "description": "api that writes messages to a mongo db",
@@ -18,5 +31,6 @@
   },
   "dependencies": {
     "cors": "^2.8.5"
+>>>>>>> development
   }
 }
