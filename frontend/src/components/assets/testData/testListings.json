@@ -1,0 +1,84 @@
+[
+  {
+    "Type": "House",
+    "Suburb": "Birkenhead",
+    "Rent": " $690",
+    "Rooms": "3+",
+    "Bathrooms": "2+",
+    "Pets": false,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070871365.jpg"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Hauraki",
+    "Rent": " $860",
+    "Rooms": "3+",
+    "Bathrooms": "2+",
+    "Pets": true,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070618341.jpg"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Drury",
+    "Rent": " $490",
+    "Rooms": "3+",
+    "Bathrooms": "2+",
+    "Pets": false,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070615780.jpg"
+  },
+      {
+    "Type": "House",
+    "Suburb": "Hillsborough",
+    "Rent": " $750",
+    "Rooms": "3+",
+    "Bathrooms": "2+",
+    "Pets": false,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070614471.jpg"
+  },
+      {
+    "Type": "House",
+    "Suburb": "Drury",
+    "Rent": " $450",
+    "Rooms": "3+",
+    "Bathrooms": "2+",
+    "Pets": false,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070308910.jpg"
+  },
+      {
+    "Type": "House",
+    "Suburb": "Gulf Harbour",
+    "Rent": " $950",
+    "Rooms": "4+",
+    "Bathrooms": "3+",
+    "Pets": false,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070664784.jpg"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Glenfield",
+    "Rent": " $755",
+    "Rooms": "3+",
+    "Bathrooms": "1+",
+    "Pets": true,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070671974.jpg"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Glen Eden",
+    "Rent": " $430",
+    "Rooms": "2+",
+    "Bathrooms": "1+",
+    "Pets": true,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070683800.jpg"
+  },
+     {
+    "Type": "House",
+    "Suburb": "Kelston",
+    "Rent": " $750",
+    "Rooms": "4+",
+    "Bathrooms": "3+",
+    "Pets": true,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2069586134.jpg"
+  }
+  
+]

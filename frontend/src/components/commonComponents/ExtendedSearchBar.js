@@ -1,16 +1,17 @@
+
 import React, { useState } from "react";
 
-const ExtendedSearchBar = () => {
+const ExtendedSearchBar = ({ setSearchOptions }) => {
   const [selectedType, setSelectedType] = useState(null);
   const [selectedPet, setSelectedPet] = useState(null);
   const [selectedRooms, setSelectedRooms] = useState(null);
   const [selectedBathrooms, setSelectedBathroooms] = useState(null);
   const [selectedRent, setSelectedRent] = useState(null);
-  const [selectedSuburb,setSelectedSuburb] = useState(null);
+  const [selectedSuburb, setSelectedSuburb] = useState(null);
 
-  const handleSuburbSelect = (string) =>{
-    setSelectedSuburb (string);
-  }
+  const handleSuburbSelect = (string) => {
+    setSelectedSuburb(string);
+  };
   const handleTypeSelect = (type) => {
     setSelectedType(type);
   };
@@ -19,46 +20,37 @@ const ExtendedSearchBar = () => {
   };
   const handleRoomsSelect = (value) => {
     setSelectedRooms(value);
-  }
-  const handleBahtroomsSelect = (value) =>{
+  };
+  const handleBahtroomsSelect = (value) => {
     setSelectedBathroooms(value);
-  }
-  const handleRentSelect = (range) =>{
-    setSelectedRent (range);
-  }
+  };
+  const handleRentSelect = (range) => {
+    setSelectedRent(range);
+  };
 
   const handleSearchClick = () => {
-    const dbRequest = [];
-    if (selectedSuburb !== null) {
-      dbRequest.push({ Suburb: selectedSuburb });
-    }
-    if (selectedType !== null) {
-      dbRequest.push({ Type: selectedType });
-    }
-    if (selectedBathrooms !== null) {
-      dbRequest.push({ Bathrooms: selectedBathrooms });
-    }
-    if (selectedPet !== null) {
-      dbRequest.push({ Pets: selectedPet });
-    }
-    if (selectedRent !== null) {
-      dbRequest.push({ Rent: selectedRent });
-    }
-    if (selectedRooms !== null) {
-      dbRequest.push({ Rooms: selectedRooms });
-    }
-    console.log(dbRequest);
+    // Creates an object to capture selected search options
+    const searchOptions = {
+      Suburb: selectedSuburb,
+      Type: selectedType,
+      Bathrooms: selectedBathrooms,
+      Pets: selectedPet,
+      Rent: selectedRent,
+      Rooms: selectedRooms,
+    };
+
+    // to pass the search options to the parent component
+    setSearchOptions(searchOptions);
   };
 
   return (
     <div className="flex justify-center items-center">
-      {/* <div className="navbar mt-8 mb-12 w-2/3 flex justify-between shadow-2xl"> */}
-      <div className="navbar mt-8 mb-12  sm:w-2/3 flex justify-between shadow-2xl p-1 border">
+      <div className="navbar mt-8 mb-12  sm:w-2/3 flex justify-between shadow-custom p-1 border">
         <div className="flex-1 px-2 lg:flex-none">
           <input
             type="text"
             placeholder="Type an Auckland Suburb"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs rounded-none "
             onChange={(e) => handleSuburbSelect(e.target.value)}
           />
         </div>
@@ -208,7 +200,7 @@ const ExtendedSearchBar = () => {
           )}
         </div>
         <button
-          className="btn btn-error bg-red-600 text-white"
+          className="btn btn-error bg-red-600 text-white rounded-none w-130"
           onClick={handleSearchClick}
         >
           Search
@@ -217,4 +209,6 @@ const ExtendedSearchBar = () => {
     </div>
   );
 };
+    
+ 
 export default ExtendedSearchBar;
