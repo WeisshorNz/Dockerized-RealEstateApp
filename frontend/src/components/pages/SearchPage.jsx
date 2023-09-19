@@ -47,7 +47,7 @@ function SearchPage() {
 
   return (
     <div>
-      {/* <NavBar/> */}
+      <NavBar/>
     
       <h1 className= "sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
         Search properties to rent
@@ -66,7 +66,7 @@ function SearchPage() {
         <a href="#" className='mr-20 text-gray-600 underline mt-4 mb-20 font-dm-sands'>View All</a>
       </div>
 
-      {/* <FooterS/> */}
+      <FooterS/>
     </div>
   );
 }

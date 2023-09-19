@@ -3,15 +3,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      spacing: {
-        150: "250px",
-      },
       width: {
         custom: "20rem",
       },
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
         "better-yesterday": ["Better Yesterday", "sans"],
+        poppins: ["Poppins", "sans"],
       },
       fontSize: {
         dream: "240.345px",
@@ -23,7 +21,7 @@ module.exports = {
         15: "60px",
         590: "590px",
         910: "910px",
-        poppins: ["Poppins", "sans"],
+        150: "250px",
       },
     },
   },
