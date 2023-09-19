@@ -19,22 +19,22 @@ export const NavBar = () => {
         <div className="border-r border-white h-6 mx-6"></div>
 
         <nav className="flex space-x-4">
-          <a href="#" className="text-gray-500" style={navTextStyle}>
+          <a href="#" className="text-gray-400" style={navTextStyle}>
             Home
           </a>
-          <a href="#" className="text-gray-500" style={navTextStyle}>
+          <a href="#" className="text-gray-400" style={navTextStyle}>
             Services
           </a>
-          <a href="#" className="text-gray-500" style={navTextStyle}>
+          <a href="#" className="text-gray-400" style={navTextStyle}>
             Tenants
           </a>
-          <a href="#" className="text-gray-500" style={navTextStyle}>
+          <a href="#" className="text-gray-400" style={navTextStyle}>
             Blog
           </a>
-          <a href="#" className="text-gray-500" style={navTextStyle}>
+          <a href="#" className="text-gray-400" style={navTextStyle}>
             About us
           </a>
-          <a href="#" className="text-gray-500" style={navTextStyle}>
+          <a href="#" className="text-gray-400" style={navTextStyle}>
             Contact
           </a>
         </nav>
