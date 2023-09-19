@@ -4,7 +4,8 @@ import { FooterS } from '../commonComponents/FooterS';
 import ExtendedSearchBar from '../commonComponents/ExtendedSearchBar';
 import ImageGrid from '../luisComponents/ImageGrid';
 import testData from "../assets/testData/testListings.json";
-// import ResponsiveTest from '../commonComponents/ResponsiveTest';
+import 'fontsource-poppins';
+
 
 
 function SearchPage() {

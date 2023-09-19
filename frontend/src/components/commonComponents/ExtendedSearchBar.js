@@ -45,39 +45,38 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="navbar mt-8 mb-12  sm:w-2/3 flex justify-between shadow-custom p-1 border">
-        <div className="flex-1 px-2 lg:flex-none">
+      <div className="navbar mt-8 mb-12 sm:w-2/3 flex flex-col sm:flex-row justify-evenly shadow-custom p-1 border bg-gray-100 sm:bg-white">
+        <div className="w-full sm:w-60 flex justify-center">
           <input
             type="text"
             placeholder="Type an Auckland Suburb"
-            className="input input-bordered w-full max-w-xs rounded-none "
+            className="input input-bordered w-full max-w-xs rounded-none px-2 lg:flex-none mb-2 sm:mb-0"
             onChange={(e) => handleSuburbSelect(e.target.value)}
           />
         </div>
 
-        <div className="flex items-stretch flex-col justify-center">
-          <div className="dropdown dropdown-bottom">
-            <label tabIndex={0} className="btn btn-ghost rounded-btn">
-              Property Type ▼
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
-            >
-              <li>
-                <a onClick={() => handleTypeSelect("House")}>House</a>
-              </li>
-              <li>
-                <a onClick={() => handleTypeSelect("Unit")}>Unit</a>
-              </li>
-              <li>
-                <a onClick={() => handleTypeSelect("Town House")}>Town House</a>
-              </li>
-              <li>
-                <a onClick={() => handleTypeSelect("Apartment")}>Apartment</a>
-              </li>
-            </ul>
-          </div>
+        <div className="dropdown dropdown-bottom">
+          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+            Property Type ▼
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+          >
+            <li>
+              <a onClick={() => handleTypeSelect("House")}>House</a>
+            </li>
+            <li>
+              <a onClick={() => handleTypeSelect("Unit")}>Unit</a>
+            </li>
+            <li>
+              <a onClick={() => handleTypeSelect("Town House")}>Town House</a>
+            </li>
+            <li>
+              <a onClick={() => handleTypeSelect("Apartment")}>Apartment</a>
+            </li>
+          </ul>
+          {/* </div> */}
           {selectedType && (
             <div className="text-red-600 text-center -mt-3.5">
               {selectedType}
@@ -200,7 +199,7 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
           )}
         </div>
         <button
-          className="btn btn-error bg-red-600 text-white rounded-none w-130"
+          className="btn btn-error bg-red-600 text-white rounded-none w-custom sm:w-32"
           onClick={handleSearchClick}
         >
           Search
