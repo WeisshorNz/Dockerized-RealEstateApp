@@ -34,7 +34,7 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
       Suburb: selectedSuburb,
       Type: selectedType,
       Bathrooms: selectedBathrooms,
-      Pets: selectedPet,
+      Carparks: selectedPet,
       Rent: selectedRent,
       Rooms: selectedRooms,
     };
@@ -44,8 +44,8 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
   };
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="navbar mt-8 mb-12 sm:w-2/3 flex flex-col sm:flex-row justify-evenly shadow-custom p-1 border bg-gray-100 sm:bg-white">
+    <div className="flex justify-center items-center mx-auto max-w-screen-xl px-4 md:px-8">
+      <div className="navbar mt-8 mb-12 flex flex-col sm:flex-row justify-evenly shadow-custom p-1 border bg-gray-100 sm:bg-white">
         <div className="w-full sm:w-60 flex justify-center">
           <input
             type="text"
@@ -127,19 +127,19 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
               <a onClick={() => handleRoomsSelect("Any")}>Any</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("1+")}>1+</a>
+              <a onClick={() => handleRoomsSelect(1)}>1+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("2+")}>2+</a>
+              <a onClick={() => handleRoomsSelect(2)}>2+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("3+")}>3+</a>
+              <a onClick={() => handleRoomsSelect(3)}>3+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("4+")}>4+</a>
+              <a onClick={() => handleRoomsSelect(4)}>4+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("5+")}>5+</a>
+              <a onClick={() => handleRoomsSelect(5)}>5+</a>
             </li>
           </ul>
           {selectedRooms && (
@@ -161,13 +161,13 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
               <a onClick={() => handleBahtroomsSelect("Any")}>Any</a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect("1+")}>1+</a>
+              <a onClick={() => handleBahtroomsSelect(1)}>1+</a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect("2+")}>2+</a>
+              <a onClick={() => handleBahtroomsSelect(2)}>2+</a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect("3+")}>3+</a>
+              <a onClick={() => handleBahtroomsSelect(3)}>3+</a>
             </li>
           </ul>
           {selectedBathrooms && (
@@ -179,17 +179,20 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
 
         <div className="dropdown dropdown-bottom">
           <label tabIndex={0} className="btn btn-ghost rounded-btn">
-            Pets ▼
+            Carparks ▼
           </label>
           <ul
             tabIndex={0}
             className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handlePetSelect("Yes")}>Yes</a>
+              <a onClick={() => handlePetSelect(1)}>1+</a>
             </li>
             <li>
-              <a onClick={() => handlePetSelect("No")}>No</a>
+              <a onClick={() => handlePetSelect(2)}>2+</a>
+            </li>
+            <li>
+              <a onClick={() => handlePetSelect( 3)}>3+</a>
             </li>
           </ul>
           {selectedPet && (

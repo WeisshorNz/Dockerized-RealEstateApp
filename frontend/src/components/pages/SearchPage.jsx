@@ -15,7 +15,7 @@ function SearchPage() {
     Suburb: null,
     Type: null,
     Bathrooms: null,
-    Pets: null,
+    Carparks: null,
     Rent: null,
     Rooms: null,
   });
@@ -36,7 +36,7 @@ function SearchPage() {
        if (searchOptions.Rooms && item.Rooms !== searchOptions.Rooms) {
         match = false;
       }
-      if (searchOptions.Pets && item.Pets !== searchOptions.Pets) {
+      if (searchOptions.Carparks && item.Carparks !== searchOptions.Carparks) {
         match = false;
       }
       return match;
@@ -47,20 +47,26 @@ function SearchPage() {
 
   return (
     <div>
-      <NavBar/>
+      {/* <NavBar/> */}
     
-      <h1 className= "sm:min-w-0 min-w-3xl font-poppins text-5xl font-bold leading-10 tracking-wide text-center my-12">
+      <h1 className= "sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
         Search properties to rent
       </h1>
 
       {/* Pass setSearchOptions as a prop to ExtendedSearchBar */}
       <ExtendedSearchBar setSearchOptions={setSearchOptions} />
-      {/* <ResponsiveTest /> */}
+      <div className='flex justify-end mr-20'>
+        <a href="#" className='mr-20 text-gray-600 underline mt-10 font-dm-sands'>View All</a>
+      </div>
 
       {/* Pass the filteredData as a prop to ImageGrid */}
       <ImageGrid data={filteredData} />
 
-      <FooterS/>
+      <div className='flex justify-end mr-20'>
+        <a href="#" className='mr-20 text-gray-600 underline mt-4 mb-20 font-dm-sands'>View All</a>
+      </div>
+
+      {/* <FooterS/> */}
     </div>
   );
 }
