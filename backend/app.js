@@ -16,6 +16,9 @@ require("./mongo")();
 const messageRoute = require("./Routes/messageRoute");
 app.use("/message", messageRoute);
 
+const listingRoute = require("./Routes/listingRoute");
+app.use("/listing", listingRoute);
+
 // 404 Error Handling Middleware
 app.use((req, res, next) => {
   const err = createError(404, "Not found");

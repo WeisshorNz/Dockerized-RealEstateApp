@@ -8,7 +8,8 @@ Content-Type: application/json
 
 ### delete a message
 DELETE http://localhost:4001/message/65003185ad7bea86ba61faec
-### get all messages in database
+
+### get all listings in database
 GET http://localhost:4001/message
 
 ### modify an exsiting message
@@ -21,4 +22,7 @@ Content-Type: application/json
 
 ### get a single message by id
 GET http://localhost:4001/message/id?
+
+### get a single listing by Rooms
+GET http://localhost:4001/message/1
 
