@@ -7,7 +7,7 @@ const listingSchema = new Schema({
   Rent: Number,
   Rooms: Number,
   Bathrooms: Number,
-  Carparks: Number,
+  Carparks: Number, 
   image: String,
   Agent: String,
   Address: String,

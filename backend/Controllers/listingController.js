@@ -3,32 +3,42 @@ const mongoose = require("mongoose");
 const Listing = require("../Models/listingModel");
 
 module.exports = {
+    //api to get only filtered listings
   filteredListings: async (req, res, next) => {
     try {
-      const Type = req.query.Type;
-      const Suburb = req.query.Suburb;
-      // const Rent = req.query.listingRent;
-      const Rooms = parseInt(req.query.Rooms);
-      const Bathrooms = parseInt(req.query.Bathrooms);
-      const Carparks = parseInt(req.query.Carparks);
+        const query = {};
+        if (req.query.Type) {
+            query.Type = req.query.Type;
+        }
+        if (req.query.Suburb) {
+            query.Suburb = req.query.Suburb;
+        }
+        // if (req.query.Rent) {
+        //     query.Rent = parseFloat(req.query.Rent);
+        if (req.query.Rooms) {
+            query.Rooms = parseInt(req.query.Rooms);
+        }
+        if (req.query.Bathrooms) {
+            query.Bathrooms = parseInt(req.query.Bathrooms);
+        }
+        if (req.query.Carparks) {
+            query.Carparks = parseInt(req.query.Carparks);
+        }
+        // Only construct the $or query if there are query parameters
+        if (Object.keys(query).length > 0) {
+            const foundListings = await Listing.find({ $or: [query] });
+            res.json(foundListings);
+        } else {
 
-      const fListings = await Listing.find({
-        Type: Type,
-        Suburb: Suburb,
-        // Rent: Rent, 
-        Rooms: Rooms, 
-        Bathrooms:Bathrooms,
-        Carparks: Carparks, 
-      });
-
-      res.json(fListings);
+            res.json([]);
+        }
     } catch (error) {
-      console.error(error.message);
-      next(error);
+        console.error(error.message);
+        next(error);
     }
-  },
+},
 
-
+//api to get all listings in db
   getAllListings: async (req, res, next) => {
     try {
       const results = await Listing.find({});
@@ -39,20 +49,17 @@ module.exports = {
     }
   },
 
+// api to get listings matching number of bedrooms as params
   findListingByRooms: async (req, res, next) => {
-    const requestedRooms = parseInt(req.params.Rooms); // Convert to integer
+    const requestedRooms = parseInt(req.params.Rooms);
     try {
-      // Assuming you have a Listing model with a "Rooms" field in your database
       const listings = await Listing.find({ Rooms: requestedRooms });
-
       if (listings.length === 0) {
-        // If no matching listings were found, return a 404 error
         throw createError(
           404,
           "No listings with the requested number of rooms found."
         );
       }
-
       res.json(listings);
     } catch (error) {
       console.error(error.message);
