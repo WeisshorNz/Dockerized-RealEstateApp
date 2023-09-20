@@ -50,7 +50,7 @@ function SearchPage() {
   }, [searchOptions]);
 
   return (
-    <div>
+    <div className="bg-white">
       <NavBar />
 
       <h1 className="sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">

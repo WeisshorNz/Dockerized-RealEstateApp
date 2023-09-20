@@ -19,21 +19,21 @@ const SvgIcon = () => (
 
 export const TestimonialCard = () => {
   return (
-    <div className="relative w-[304px] h-[275px] p-6 border border-gray-300 bg-white flex flex-col justify-center">
-      <div className="flex items-start">
-        <SvgIcon className="w-10 h-8 fill-[#CB1212] opacity-20" />
+    <div className="relative w-[304px] h-[275px] p-6 border border-gray-300 bg-white flex flex-col justify-between">
+      <div className="flex justify-center items-center mb-6">
+        <SvgIcon className="w-10 h-8 opacity-10" />
       </div>
 
-      <h2 className="text-0B2E29  text-base font-bold leading-7 mt-5">
+      <h2 className="text-green-950 text-base font-bold leading-7 mb-4">
         It proved to be exactly the kind of home we wanted.
       </h2>
 
-      <p className="text-black font-poppins text-sm font-semibold leading-6 tracking-tighter mt-5">
+      <p className="text-black font-poppins text-sm font-semibold leading-6 tracking-tighter mb-5">
         We wish to express our thanks for your hard work in finding us a
         temporary home, which proved to be exactly what we wanted.
       </p>
 
-      <p className="text-5A908D  text-sm font-semibold leading-[26px] tracking-wider mt-5">
+      <p className="text-5A908D text-sm font-semibold leading-[10px] tracking-wider">
         Jaydon Aminoff
       </p>
     </div>

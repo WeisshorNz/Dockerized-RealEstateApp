@@ -10,7 +10,7 @@ function ImageGrid({ data }) {
         {data.slice(0, 9).map((item) => (
           <div key={item.id}>
             <div
-              className="card w-96 bg-base-100 shadow-xl"
+              className="card w-96 bg-white shadow-xl"
               style={{ borderRadius: "0", border: "1px solid #e2e8f0" }}
             >
               <div className="relative">
@@ -30,12 +30,12 @@ function ImageGrid({ data }) {
               />
               <div className="card-body">
                 <div className="flex items-center">
-                  <h1 className="card-title font-dm-sans text-3xl">
+                  <h1 className="card-title text-black font-dm-sans text-3xl">
                     $ {item.Rent}
                   </h1>
                   <span className="text-gray-400 ml-1"> / Week</span>
                 </div>
-                <h2 className="card-title font-dm-sans text-3xl">
+                <h2 className="card-title text-black font-dm-sans text-3xl">
                   {item.Suburb}
                 </h2>
                 <h3 className="text-gray-400 ml-1 text-lg">{item.Address}</h3>
@@ -65,4 +65,3 @@ function ImageGrid({ data }) {
 }
 
 export default ImageGrid;
-

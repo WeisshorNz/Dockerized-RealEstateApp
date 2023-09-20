@@ -49,7 +49,7 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
           <input
             type="text"
             placeholder="Type an Auckland Suburb"
-            className="input input-bordered w-full max-w-xs rounded-none px-2 lg:flex-none mb-2 sm:mb-0"
+            className="input input-bordered w-full max-w-xs rounded-none px-2 lg:flex-none mb-2 sm:mb-0 bg-white"
             onChange={(e) => handleSuburbSelect(e.target.value)}
           />
         </div>

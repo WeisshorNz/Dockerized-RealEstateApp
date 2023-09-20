@@ -4,7 +4,7 @@ import { TestimonialCard } from "./TestimonialCard";
 export const SectionFive = () => {
   return (
     <div className="bg-[#F5F5F5] mx-auto py-16">
-      <h1 className="text-5A908D font-poppins text-xl font-normal leading-6 text-center mb-4">
+      <h1 className="text-5A908D font-poppins text-xl font-semibold leading-6 text-center mb-4">
         CUSTOMER TESTIMONIALS
       </h1>
       <p className="text-black text-center font-poppins text-5xl font-extrabold leading-14 tracking-tight mt-2">
