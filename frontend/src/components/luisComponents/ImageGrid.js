@@ -65,3 +65,4 @@ function ImageGrid({ data }) {
 }
 
 export default ImageGrid;
+
