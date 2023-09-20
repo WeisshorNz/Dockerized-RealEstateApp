@@ -1,5 +1,5 @@
 ### create a new message
-POST  http://localhost:4001/message
+POST  http://localhost:4001/house
 Content-Type: application/json
 
 {

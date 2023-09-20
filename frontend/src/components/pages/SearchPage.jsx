@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { NavBar } from '../commonComponents/NavBar';
-import { FooterS } from '../commonComponents/FooterS';
-import ExtendedSearchBar from '../commonComponents/ExtendedSearchBar';
-import ImageGrid from '../luisComponents/ImageGrid';
-import 'fontsource-poppins';
-
-
+import React, { useState, useEffect } from "react";
+import { NavBar } from "../commonComponents/NavBar";
+import { FooterS } from "../commonComponents/FooterS";
+import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
+import ImageGrid from "../luisComponents/ImageGrid";
+// import testData from "../assets/testData/testListings.json";
+import "fontsource-poppins";
 
 function SearchPage() {
   const [filteredData, setFilteredData] = useState([]);
-  
+
   const [searchOptions, setSearchOptions] = useState({
     Suburb: null,
     Type: null,
@@ -19,7 +18,7 @@ function SearchPage() {
     Rooms: null,
   });
 
-    useEffect(() => {
+  useEffect(() => {
     // define an async function within the useEffect
     const fetchData = async () => {
       try {
@@ -50,27 +49,37 @@ function SearchPage() {
   }, [searchOptions]);
 
   return (
-    <div>
-      <NavBar/>
-    
-      <h1 className= "sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
+    <div className="bg-white">
+      <NavBar />
+
+      <h1 className="sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
         Search properties to rent
       </h1>
 
       {/* Pass setSearchOptions as a prop to ExtendedSearchBar */}
       <ExtendedSearchBar setSearchOptions={setSearchOptions} />
-      <div className='flex justify-end mr-20'>
-        <a href="#" className='mr-20 text-gray-600 underline mt-10 font-dm-sands'>View All</a>
+      <div className="flex justify-end mr-20">
+        <a
+          href="#"
+          className="mr-20 text-gray-600 underline mt-10 font-dm-sands"
+        >
+          View All
+        </a>
       </div>
 
       {/* Pass the filteredData as a prop to ImageGrid */}
       <ImageGrid data={filteredData} />
 
-      <div className='flex justify-end mr-20'>
-        <a href="#" className='mr-20 text-gray-600 underline mt-4 mb-20 font-dm-sands'>View All</a>
+      <div className="flex justify-end mr-20">
+        <a
+          href="#"
+          className="mr-20 text-gray-600 underline mt-4 mb-20 font-dm-sands"
+        >
+          View All
+        </a>
       </div>
 
-      <FooterS/>
+      <FooterS />
     </div>
   );
 }
