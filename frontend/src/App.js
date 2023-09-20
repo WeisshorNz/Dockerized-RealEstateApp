@@ -14,8 +14,8 @@ library.add(faCar);
 function App() {
   return (
     <div className="App">
-      {/* <SearchPage /> */}
-      <MainPage />
+      <SearchPage />
+      {/* <MainPage /> */}
     </div>
   );
 }
