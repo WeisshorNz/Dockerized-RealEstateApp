@@ -59,15 +59,6 @@ function ImageGrid({ data }) {
                   </span>
                   <div className="text-2xl text-gray-400">{item.Carparks}</div>
                 </div>
-
-                {/* <div className="absolute top-0 right-0 bg-white p-1">
-                  <FontAwesomeIcon
-                    icon={["far", "heart"]}
-                    className="text-gray-400 text-2xl"
-                  />
-                </div> */}
-                {/* <p>🛏️ {item.Rooms}</p>
-                <p>🛁 {item.Bathrooms}</p> */}
               </div>
             </div>
           </div>

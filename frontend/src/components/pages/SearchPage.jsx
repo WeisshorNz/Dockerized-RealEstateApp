@@ -3,7 +3,6 @@ import { NavBar } from '../commonComponents/NavBar';
 import { FooterS } from '../commonComponents/FooterS';
 import ExtendedSearchBar from '../commonComponents/ExtendedSearchBar';
 import ImageGrid from '../luisComponents/ImageGrid';
-import testData from "../assets/testData/testListings.json";
 import 'fontsource-poppins';
 
 
@@ -20,29 +19,34 @@ function SearchPage() {
     Rooms: null,
   });
 
-  useEffect(() => {
-    
-    const filteredResults = testData.filter((item) => {
-      let match = true;
-      if (searchOptions.Suburb && item.Suburb !== searchOptions.Suburb) {
-        match = false;
-      }
-      if (searchOptions.Type && item.Type !== searchOptions.Type) {
-        match = false;
-      }
-      if (searchOptions.Bathrooms && item.Bathrooms !== searchOptions.Bathrooms) {
-        match = false;
-      }
-       if (searchOptions.Rooms && item.Rooms !== searchOptions.Rooms) {
-        match = false;
-      }
-      if (searchOptions.Carparks && item.Carparks !== searchOptions.Carparks) {
-        match = false;
-      }
-      return match;
-    });
+    useEffect(() => {
+    // define an async function within the useEffect
+    const fetchData = async () => {
+      try {
+        // convert the searchOptions object to a query string
+        const queryString = new URLSearchParams(
+          Object.entries(searchOptions).filter(([_, value]) => value !== null)
+        ).toString();
 
-    setFilteredData(filteredResults);
+        // fetching data from backend
+        const response = await fetch(
+          `http://localhost:4001/listing/filtered?${queryString}`
+        );
+        const data = await response.json();
+        // checking if data is received as an array
+        if (Array.isArray(data)) {
+          setFilteredData(data);
+        } else {
+          console.error("Received non-array data:", data);
+        }
+        setFilteredData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    // Call the function
+    fetchData();
   }, [searchOptions]);
 
   return (
