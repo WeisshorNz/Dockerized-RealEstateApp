@@ -28,31 +28,17 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
   };
 
   const handleSearchClick = () => {
-    let searchOptions = {
+    // Creates an object to capture selected search options
+    const searchOptions = {
       Suburb: selectedSuburb,
       Type: selectedType,
-      Rooms: selectedRooms !== "Any" ? Number(selectedRooms) : null,
-      Bathrooms: selectedBathrooms !== "Any" ? Number(selectedBathrooms) : null,
-      Carparks: Number(selectedPet),
+      Bathrooms: selectedBathrooms,
+      Carparks: selectedPet,
+      Rent: selectedRent,
+      Rooms: selectedRooms,
     };
 
-    // Handle Rent
-    if (selectedRent) {
-      const [minRent, maxRent] = selectedRent
-        .replace("$", "")
-        .split("-")
-        .map(Number);
-      searchOptions.minRent = minRent;
-      if (maxRent) {
-        searchOptions.maxRent = maxRent;
-      }
-    }
-
-    // Filter out null or undefined values
-    Object.keys(searchOptions).forEach(
-      (key) => searchOptions[key] == null && delete searchOptions[key]
-    );
-    console.log(searchOptions);
+    // to pass the search options to the parent component
     setSearchOptions(searchOptions);
   };
 
