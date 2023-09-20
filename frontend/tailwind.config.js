@@ -26,6 +26,7 @@ module.exports = {
       },
       colors: {
         "custom-gray": "#73788C",
+        "custom-gray2": "#575757",
         "0B2E29": "#0B2E29",
         "5A908D": "#5A908D",
       },

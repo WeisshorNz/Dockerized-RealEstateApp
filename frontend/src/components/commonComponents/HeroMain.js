@@ -17,7 +17,7 @@ export const HeroMain = () => {
       ></div>
 
       <div className="text-center z-10 px-4 lg:px-0 space-y-4 lg:space-y-8 place-self-center">
-        <h1 className="font-poppins text-4xl lg:text-8xl font-bold leading-tight tracking-tighter text-white">
+        <h1 className="font-poppins text-4xl lg:text-8xl font-extrabold leading-tight tracking-tighter text-white">
           Getting you into your
         </h1>
 
