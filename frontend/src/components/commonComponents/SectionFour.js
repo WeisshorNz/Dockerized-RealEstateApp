@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ImageGrid from "../luisComponents/ImageGrid";
-import testData from "../assets/testData/testListings.json";
+// import testData from "../assets/testData/testListings.json";
+import testData from "../assets/testData/reducedData.json"
 
 export const SectionFour = () => {
   const [filteredData, setFilteredData] = useState([]);

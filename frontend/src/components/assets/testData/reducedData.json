@@ -1,0 +1,36 @@
+[
+      {
+    "Type": "House",
+    "Suburb": "Glenfield",
+    "Rent": 755,
+    "Rooms": 3,
+    "Bathrooms": 1,
+    "Carparks": 3,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070671974.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/fdd53365-d127-4fdb-a001-688625de5592.jpg.webp",
+    "Address":"890 Mārama Road"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Glen Eden",
+    "Rent": 430,
+    "Rooms": 2,
+    "Bathrooms": 1,
+    "Carparks": 2,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070683800.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/29e2075d-8815-46d8-b451-0924c82b7037.jpg.webp",
+    "Address":"123 Johnson Avenue"
+  },
+     {
+    "Type": "House",
+    "Suburb": "Kelston",
+    "Rent": 750,
+    "Rooms": 4,
+    "Bathrooms": 3,
+    "Carparks":0,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2069586134.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/62c870ae-b627-4478-8860-9376859f6c09.jpg.webp",
+    "Address":"34 Papatūānuku Crescent"
+  }
+  
+]

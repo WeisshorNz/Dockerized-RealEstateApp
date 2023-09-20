@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBarMetro from "../assets/images/NavBarMetro.png";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,11 @@ export const NavBar = () => {
         <div className="border-r border-white h-6 mx-6 hidden lg:block"></div>
 
         <nav className="flex space-x-4 hidden lg:flex font-dm-sans text-base font-normal leading-none tracking-normal text-center">
-          <a href="#" className="text-gray-400">
-            Home
-          </a>
+          <Link to="/">
+            <a href="#" className="text-gray-400">
+              Home
+            </a>
+          </Link>
           <a href="#" className="text-gray-400">
             Services
           </a>

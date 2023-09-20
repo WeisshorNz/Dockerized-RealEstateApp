@@ -4,7 +4,7 @@ import { FooterS } from "../commonComponents/FooterS";
 import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
 import ImageGrid from "../luisComponents/ImageGrid";
 import Pagination from "../luisComponents/Pagination";
-import {SectionSix} from "../commonComponents/SectionSix"
+import { SectionSix } from "../commonComponents/SectionSix";
 import "fontsource-poppins";
 
 function SearchPage() {
@@ -59,7 +59,7 @@ function SearchPage() {
 
       {/* Pass setSearchOptions as a prop to ExtendedSearchBar */}
       <ExtendedSearchBar setSearchOptions={setSearchOptions} />
-      <div className="flex justify-end mr-20">
+      <div className="flex justify-end w-4/5">
         <a
           href="#"
           className="mr-20 text-gray-600 underline mt-10 font-dm-sands"
@@ -71,17 +71,17 @@ function SearchPage() {
       {/* Pass the filteredData as a prop to ImageGrid */}
       <ImageGrid data={filteredData} />
 
-  <div className="flex flex-col sm:flex-row justify-between w-full sm:w-2/3 mx-auto sm:ml-80">
-  <div className="flex justify-center items-center ml-0 sm:ml-72">
-    <Pagination />
-  </div>
-  <div className="flex justify-center items-center mt-4 sm:mt-0 ml-0 sm:ml-12">
-    <a href="#" className="text-gray-600 underline font-dm-sands">
-      View All
-    </a>
-  </div>
-</div>
-<SectionSix />
+      <div className="flex flex-col sm:flex-row justify-between sm:w-2/3 mx-auto sm:ml-80 absolute">
+        <div className="flex justify-center items-center sm:ml-72">
+          <Pagination />
+        </div>
+        <div className="flex justify-center items-center mt-4 sm:mt-0 sm:ml-12">
+          <a href="#" className="text-gray-600 underline font-dm-sands">
+            View All
+          </a>
+        </div>
+      </div>
+      <SectionSix />
       <FooterS />
     </div>
   );
