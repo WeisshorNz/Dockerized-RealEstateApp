@@ -4,6 +4,7 @@ import { FooterS } from "../commonComponents/FooterS";
 import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
 import ImageGrid from "../luisComponents/ImageGrid";
 import Pagination from "../luisComponents/Pagination";
+import {SectionSix} from "../commonComponents/SectionSix"
 import "fontsource-poppins";
 
 function SearchPage() {
@@ -80,9 +81,11 @@ function SearchPage() {
     </a>
   </div>
 </div>
+<SectionSix />
       <FooterS />
     </div>
   );
 }
 
 export default SearchPage;
+
