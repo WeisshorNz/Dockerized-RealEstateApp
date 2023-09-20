@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-
 function ImageGrid({ data }) {
-  useEffect(() => {
-    
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return (
     <div className="mx-auto max-w-screen-xl px-4 md:px-8 flex justify-center items-center mt-10 mb-20">
@@ -14,7 +10,7 @@ function ImageGrid({ data }) {
         {data.slice(0, 9).map((item) => (
           <div key={item.id}>
             <div
-              className="card w-96 bg-base-100 shadow-xl"
+              className="card w-96 bg-white shadow-xl"
               style={{ borderRadius: "0", border: "1px solid #e2e8f0" }}
             >
               <div className="relative">

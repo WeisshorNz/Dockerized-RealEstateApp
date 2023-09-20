@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
         "better-yesterday": ["Better Yesterday", "sans"],
+        nunitoSans: ["Nunito Sans", "sans"],
         poppins: ["Poppins", "sans"],
       },
       fontSize: {
@@ -22,6 +23,11 @@ module.exports = {
         590: "590px",
         910: "910px",
         150: "250px",
+      },
+      colors: {
+        "custom-gray": "#73788C",
+        "0B2E29": "#0B2E29",
+        "5A908D": "#5A908D",
       },
     },
   },

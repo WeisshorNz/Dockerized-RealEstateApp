@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 const ExtendedSearchBar = ({ setSearchOptions }) => {
@@ -29,17 +28,31 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
   };
 
   const handleSearchClick = () => {
-    // Creates an object to capture selected search options
-    const searchOptions = {
+    let searchOptions = {
       Suburb: selectedSuburb,
       Type: selectedType,
-      Bathrooms: selectedBathrooms,
-      Carparks: selectedPet,
-      Rent: selectedRent,
-      Rooms: selectedRooms,
+      Rooms: selectedRooms !== "Any" ? Number(selectedRooms) : null,
+      Bathrooms: selectedBathrooms !== "Any" ? Number(selectedBathrooms) : null,
+      Carparks: Number(selectedPet),
     };
 
-    // to pass the search options to the parent component
+    // Handle Rent
+    if (selectedRent) {
+      const [minRent, maxRent] = selectedRent
+        .replace("$", "")
+        .split("-")
+        .map(Number);
+      searchOptions.minRent = minRent;
+      if (maxRent) {
+        searchOptions.maxRent = maxRent;
+      }
+    }
+
+    // Filter out null or undefined values
+    Object.keys(searchOptions).forEach(
+      (key) => searchOptions[key] == null && delete searchOptions[key]
+    );
+    console.log(searchOptions);
     setSearchOptions(searchOptions);
   };
 
@@ -192,7 +205,7 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
               <a onClick={() => handlePetSelect(2)}>2+</a>
             </li>
             <li>
-              <a onClick={() => handlePetSelect( 3)}>3+</a>
+              <a onClick={() => handlePetSelect(3)}>3+</a>
             </li>
           </ul>
           {selectedPet && (
@@ -211,6 +224,5 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
     </div>
   );
 };
-    
- 
+
 export default ExtendedSearchBar;
