@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-const ExtendedSearchBar = () => {
+const ExtendedSearchBar = ({ setSearchOptions }) => {
   const [selectedType, setSelectedType] = useState(null);
   const [selectedPet, setSelectedPet] = useState(null);
   const [selectedRooms, setSelectedRooms] = useState(null);
   const [selectedBathrooms, setSelectedBathroooms] = useState(null);
   const [selectedRent, setSelectedRent] = useState(null);
+  const [selectedSuburb, setSelectedSuburb] = useState(null);
 
+  const handleSuburbSelect = (string) => {
+    setSelectedSuburb(string);
+  };
   const handleTypeSelect = (type) => {
     setSelectedType(type);
   };
@@ -15,49 +19,77 @@ const ExtendedSearchBar = () => {
   };
   const handleRoomsSelect = (value) => {
     setSelectedRooms(value);
-  }
-  const handleBahtroomsSelect = (value) =>{
+  };
+  const handleBahtroomsSelect = (value) => {
     setSelectedBathroooms(value);
-  }
-  const handleRentSelect = (range) =>{
-    setSelectedRent (range);
-  }
+  };
+  const handleRentSelect = (range) => {
+    setSelectedRent(range);
+  };
+
+  const handleSearchClick = () => {
+    let searchOptions = {
+      Suburb: selectedSuburb,
+      Type: selectedType,
+      Rooms: selectedRooms !== "Any" ? Number(selectedRooms) : null,
+      Bathrooms: selectedBathrooms !== "Any" ? Number(selectedBathrooms) : null,
+      Carparks: Number(selectedPet),
+    };
+
+    // Handle Rent
+    if (selectedRent) {
+      const [minRent, maxRent] = selectedRent
+        .replace("$", "")
+        .split("-")
+        .map(Number);
+      searchOptions.minRent = minRent;
+      if (maxRent) {
+        searchOptions.maxRent = maxRent;
+      }
+    }
+
+    // Filter out null or undefined values
+    Object.keys(searchOptions).forEach(
+      (key) => searchOptions[key] == null && delete searchOptions[key]
+    );
+    console.log(searchOptions);
+    setSearchOptions(searchOptions);
+  };
+
   return (
-    <div className="flex justify-center items-center ">
-      <div className="navbar mt-8 mb-12 w-2/3 flex justify-between shadow-2xl">
-        <div className="flex-1 px-2 lg:flex-none">
+    <div className="flex justify-center items-center mx-auto max-w-screen-xl px-4 md:px-8">
+      <div className="navbar mt-8 mb-12 flex flex-col sm:flex-row justify-evenly shadow-custom p-1 border bg-gray-100 sm:bg-white">
+        <div className="w-full sm:w-60 flex justify-center">
           <input
             type="text"
             placeholder="Type an Auckland Suburb"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs rounded-none px-2 lg:flex-none mb-2 sm:mb-0"
+            onChange={(e) => handleSuburbSelect(e.target.value)}
           />
         </div>
 
-        {/* <div className="flex justify-end flex-1 px-2">
-           <div className="flex items-stretch flex-col"> */}
-        <div className="flex items-stretch flex-col justify-center">
-          <div className="dropdown dropdown-bottom">
-            <label tabIndex={0} className="btn btn-ghost rounded-btn">
-              Property Type ▼
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
-            >
-              <li>
-                <a onClick={() => handleTypeSelect("House")}>House</a>
-              </li>
-              <li>
-                <a onClick={() => handleTypeSelect("Unit")}>Unit</a>
-              </li>
-              <li>
-                <a onClick={() => handleTypeSelect("Town House")}>Town House</a>
-              </li>
-              <li>
-                <a onClick={() => handleTypeSelect("Apartment")}>Apartment</a>
-              </li>
-            </ul>
-          </div>
+        <div className="dropdown dropdown-bottom">
+          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+            Property Type ▼
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+          >
+            <li>
+              <a onClick={() => handleTypeSelect("House")}>House</a>
+            </li>
+            <li>
+              <a onClick={() => handleTypeSelect("Unit")}>Unit</a>
+            </li>
+            <li>
+              <a onClick={() => handleTypeSelect("Town House")}>Town House</a>
+            </li>
+            <li>
+              <a onClick={() => handleTypeSelect("Apartment")}>Apartment</a>
+            </li>
+          </ul>
+          {/* </div> */}
           {selectedType && (
             <div className="text-red-600 text-center -mt-3.5">
               {selectedType}
@@ -108,19 +140,19 @@ const ExtendedSearchBar = () => {
               <a onClick={() => handleRoomsSelect("Any")}>Any</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("1+")}>1+</a>
+              <a onClick={() => handleRoomsSelect(1)}>1+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("2+")}>2+</a>
+              <a onClick={() => handleRoomsSelect(2)}>2+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("3+")}>3+</a>
+              <a onClick={() => handleRoomsSelect(3)}>3+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("4+")}>4+</a>
+              <a onClick={() => handleRoomsSelect(4)}>4+</a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect("5+")}>5+</a>
+              <a onClick={() => handleRoomsSelect(5)}>5+</a>
             </li>
           </ul>
           {selectedRooms && (
@@ -142,13 +174,13 @@ const ExtendedSearchBar = () => {
               <a onClick={() => handleBahtroomsSelect("Any")}>Any</a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect("1+")}>1+</a>
+              <a onClick={() => handleBahtroomsSelect(1)}>1+</a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect("2+")}>2+</a>
+              <a onClick={() => handleBahtroomsSelect(2)}>2+</a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect("3+")}>3+</a>
+              <a onClick={() => handleBahtroomsSelect(3)}>3+</a>
             </li>
           </ul>
           {selectedBathrooms && (
@@ -160,17 +192,20 @@ const ExtendedSearchBar = () => {
 
         <div className="dropdown dropdown-bottom">
           <label tabIndex={0} className="btn btn-ghost rounded-btn">
-            Pets ▼
+            Carparks ▼
           </label>
           <ul
             tabIndex={0}
             className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handlePetSelect("Yes")}>Yes</a>
+              <a onClick={() => handlePetSelect(1)}>1+</a>
             </li>
             <li>
-              <a onClick={() => handlePetSelect("No")}>No</a>
+              <a onClick={() => handlePetSelect(2)}>2+</a>
+            </li>
+            <li>
+              <a onClick={() => handlePetSelect(3)}>3+</a>
             </li>
           </ul>
           {selectedPet && (
@@ -179,9 +214,15 @@ const ExtendedSearchBar = () => {
             </div>
           )}
         </div>
-        <button className="btn btn-error bg-red-600 text-white">Search</button>
+        <button
+          className="btn btn-error bg-red-600 text-white rounded-none w-custom sm:w-32"
+          onClick={handleSearchClick}
+        >
+          Search
+        </button>
       </div>
     </div>
   );
 };
+
 export default ExtendedSearchBar;

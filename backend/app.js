@@ -16,6 +16,9 @@ require("./mongo")();
 const messageRoute = require("./Routes/messageRoute");
 app.use("/message", messageRoute);
 
+const houseRoute = require("./Routes/houseRoute");
+app.use("/house", houseRoute);
+
 // 404 Error Handling Middleware
 app.use((req, res, next) => {
   const err = createError(404, "Not found");

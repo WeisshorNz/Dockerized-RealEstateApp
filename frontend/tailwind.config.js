@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      width: {
+        custom: "20rem",
+      },
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
         "better-yesterday": ["Better Yesterday", "sans"],
@@ -19,6 +22,7 @@ module.exports = {
         15: "60px",
         590: "590px",
         910: "910px",
+        150: "250px",
       },
       colors: {
         "custom-gray": "#73788C",

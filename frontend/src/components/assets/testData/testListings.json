@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "House",
+    "Suburb": "Birkenhead",
+    "Rent": 690,
+    "Rooms": 3,
+    "Bathrooms": 2,
+    "Carparks": 1,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070871365.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/62c870ae-b627-4478-8860-9376859f6c09.jpg.webp",
+    "Address":"123 Elm Street"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Hauraki",
+    "Rent": 860,
+    "Rooms": 3,
+    "Bathrooms": 2,
+    "Carparks": 3,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070618341.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/599c5fd1-b893-4f5b-a39b-f81bc66eb26a.jpg.webp",
+    "Address":"89 Oak Avenue"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Drury",
+    "Rent": 490,
+    "Rooms": 3,
+    "Bathrooms":2,
+    "Carparks": 0,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070615780.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/fdd53365-d127-4fdb-a001-688625de5592.jpg.webp",
+    "Address":"6 Maple Lane"
+  },
+      {
+    "Type": "House",
+    "Suburb": "Hillsborough",
+    "Rent": 750,
+    "Rooms": 3,
+    "Bathrooms": 2,
+    "Carparks": 0,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070614471.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/29e2075d-8815-46d8-b451-0924c82b7037.jpg.webp",
+    "Address":"67 Wilson Drive"
+  },
+      {
+    "Type": "House",
+    "Suburb": "Drury",
+    "Rent": 450,
+    "Rooms": 3,
+    "Bathrooms": 2,
+    "Carparks": 2,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2061512881.jpg ",
+    "Agent":"https://assets.cloudhi.io/system/team-members/599c5fd1-b893-4f5b-a39b-f81bc66eb26a.jpg.webp",
+    "Address":"78 B Taylor Road"
+
+  },
+      {
+    "Type": "House",
+    "Suburb": "Gulf Harbour",
+    "Rent": 950,
+    "Rooms": 4,
+    "Bathrooms": 3,
+    "Carparks": 1,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070664784.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/62c870ae-b627-4478-8860-9376859f6c09.jpg.webp",
+    "Address":"90 Miller Court"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Glenfield",
+    "Rent": 755,
+    "Rooms": 3,
+    "Bathrooms": 1,
+    "Carparks": 3,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070671974.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/fdd53365-d127-4fdb-a001-688625de5592.jpg.webp",
+    "Address":"890 Mārama Road"
+  },
+    {
+    "Type": "House",
+    "Suburb": "Glen Eden",
+    "Rent": 430,
+    "Rooms": 2,
+    "Bathrooms": 1,
+    "Carparks": 2,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2070683800.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/29e2075d-8815-46d8-b451-0924c82b7037.jpg.webp",
+    "Address":"123 Johnson Avenue"
+  },
+     {
+    "Type": "House",
+    "Suburb": "Kelston",
+    "Rent": 750,
+    "Rooms": 4,
+    "Bathrooms": 3,
+    "Carparks":0,
+    "image":"https://trademe.tmcdn.co.nz/photoserver/plus/2069586134.jpg",
+    "Agent":"https://assets.cloudhi.io/system/team-members/62c870ae-b627-4478-8860-9376859f6c09.jpg.webp",
+    "Address":"34 Papatūānuku Crescent"
+  }
+  
+]
