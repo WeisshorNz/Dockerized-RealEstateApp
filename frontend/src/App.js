@@ -17,7 +17,7 @@ function App() {
     <div className="App">
 
       
-      {/* <SearchPage />; */}
+      <SearchPage />;
     </div>
   );
 }
