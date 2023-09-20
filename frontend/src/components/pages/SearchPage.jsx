@@ -51,9 +51,9 @@ function SearchPage() {
 
   return (
     <div>
-      <NavBar/>
-    
-      <h1 className= "sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
+      <NavBar />
+
+      <h1 className="sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
         Search properties to rent
       </h1>
 
@@ -88,4 +88,3 @@ function SearchPage() {
 }
 
 export default SearchPage;
-

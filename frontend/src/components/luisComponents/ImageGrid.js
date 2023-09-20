@@ -10,7 +10,7 @@ function ImageGrid({ data }) {
         {data.slice(0, 9).map((item) => (
           <div key={item.id}>
             <div
-              className="card w-96 bg-white shadow-xl"
+              className="card w-96 bg-base-100 shadow-xl"
               style={{ borderRadius: "0", border: "1px solid #e2e8f0" }}
             >
               <div className="relative">

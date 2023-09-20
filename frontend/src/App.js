@@ -6,7 +6,6 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBed, faBath, faCar } from "@fortawesome/free-solid-svg-icons";
 
 import SearchPage from "./components/pages/SearchPage";
-
 // Icons for listings cards
 library.add(faHeart);
 library.add(faBed);
@@ -16,7 +15,7 @@ library.add(faCar);
 function App() {
   return (
     <div className="App">
-      <SearchPage />;
+      <SearchPage />
     </div>
   );
 }
