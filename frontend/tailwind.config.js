@@ -6,6 +6,9 @@ module.exports = {
       spacing: {
         150: "250px",
       },
+      margin: {
+        custom1:"10px",
+      },
       width: {
         custom: "20rem",
       },

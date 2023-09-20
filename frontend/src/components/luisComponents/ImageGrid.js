@@ -9,7 +9,7 @@ function ImageGrid({ data }) {
   }, [data]);
 
   return (
-    <div className="mx-auto max-w-screen-xl px-4 md:px-8 mb-40 flex justify-center items-center mt-10">
+    <div className="mx-auto max-w-screen-xl px-4 md:px-8 flex justify-center items-center mt-10 mb-20">
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
         {data.slice(0, 9).map((item) => (
           <div key={item.id}>
