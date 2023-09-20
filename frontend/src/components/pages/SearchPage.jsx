@@ -3,7 +3,7 @@ import { NavBar } from "../commonComponents/NavBar";
 import { FooterS } from "../commonComponents/FooterS";
 import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
 import ImageGrid from "../luisComponents/ImageGrid";
-// import testData from "../assets/testData/testListings.json";
+import Pagination from "../luisComponents/Pagination";
 import "fontsource-poppins";
 
 function SearchPage() {
@@ -49,10 +49,10 @@ function SearchPage() {
   }, [searchOptions]);
 
   return (
-    <div className="bg-white">
-      <NavBar />
-
-      <h1 className="sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
+    <div>
+      <NavBar/>
+    
+      <h1 className= "sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
         Search properties to rent
       </h1>
 
@@ -70,15 +70,16 @@ function SearchPage() {
       {/* Pass the filteredData as a prop to ImageGrid */}
       <ImageGrid data={filteredData} />
 
-      <div className="flex justify-end mr-20">
-        <a
-          href="#"
-          className="mr-20 text-gray-600 underline mt-4 mb-20 font-dm-sands"
-        >
-          View All
-        </a>
-      </div>
-
+  <div className="flex flex-col sm:flex-row justify-between w-full sm:w-2/3 mx-auto sm:ml-80">
+  <div className="flex justify-center items-center ml-0 sm:ml-72">
+    <Pagination />
+  </div>
+  <div className="flex justify-center items-center mt-4 sm:mt-0 ml-0 sm:ml-12">
+    <a href="#" className="text-gray-600 underline font-dm-sands">
+      View All
+    </a>
+  </div>
+</div>
       <FooterS />
     </div>
   );
