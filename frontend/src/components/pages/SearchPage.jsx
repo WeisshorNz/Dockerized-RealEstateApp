@@ -59,6 +59,7 @@ function SearchPage() {
 
       {/* Pass setSearchOptions as a prop to ExtendedSearchBar */}
       <ExtendedSearchBar setSearchOptions={setSearchOptions} />
+
       <div className="flex justify-end w-4/5">
         <a
           href="#"
@@ -71,16 +72,18 @@ function SearchPage() {
       {/* Pass the filteredData as a prop to ImageGrid */}
       <ImageGrid data={filteredData} />
 
-      <div className="flex flex-col sm:flex-row justify-between sm:w-2/3 mx-auto sm:ml-80 absolute">
-        <div className="flex justify-center items-center sm:ml-72">
-          <Pagination />
-        </div>
-        <div className="flex justify-center items-center mt-4 sm:mt-0 sm:ml-12">
-          <a href="#" className="text-gray-600 underline font-dm-sands">
-            View All
-          </a>
-        </div>
+     
+      <div className="flex justify-center items-center mx-auto">
+     <Pagination />
       </div>
+
+      <div className="flex justify-end w-4/5">
+        <a href="#" className="text-gray-600 underline font-dm-sands mr-20">
+          View All
+        </a>
+      </div>
+      
+
       <SectionSix />
       <FooterS />
     </div>

@@ -12,7 +12,7 @@ export default function Pagination() {
           </li>
           <li>
             <a
-              class="bg-red-600 relative block rounded-full px-3 py-1.5 text-sm text-white transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+              class="bg-red-600 relative block rounded-full px-3 py-1.5 text-sm text-white transition-all duration-300 hover:bg-gray-600 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
               href="#!"
             >
               1
