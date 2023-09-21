@@ -58,7 +58,7 @@ Michael Sherrell | Nicola Pfister
 
 ## About The Project
 
-<img src="./frontend/src/components/assets/images/logo5.png" alt="Logo" width="1000" height="400">
+<img src="./frontend/src/components/assets/images/logo5.png" alt="Logo" width="1000" height="300">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
