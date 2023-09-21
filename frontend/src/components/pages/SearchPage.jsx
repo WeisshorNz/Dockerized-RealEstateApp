@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavBar } from "../commonComponents/NavBar";
 import { FooterS } from "../commonComponents/FooterS";
 import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
-import ImageGrid from "../luisComponents/ImageGrid";
+// import ImageGrid from "../luisComponents/ImageGrid";
+import { HoverOnGrid } from "../luisComponents/HoverOnGrid";
 import Pagination from "../luisComponents/Pagination";
 import { SectionSix } from "../commonComponents/SectionSix";
 import "fontsource-poppins";
@@ -62,7 +63,7 @@ function SearchPage() {
 
       <div className="flex justify-end w-4/5">
         <a
-          href="#"
+          href="#!"
           className="mr-20 text-gray-600 underline mt-10 font-dm-sands"
         >
           View All
@@ -70,7 +71,8 @@ function SearchPage() {
       </div>
 
       {/* Pass the filteredData as a prop to ImageGrid */}
-      <ImageGrid data={filteredData} />
+      {/* <ImageGrid data={filteredData} /> */}
+      <HoverOnGrid data={filteredData} />
 
      
       <div className="flex justify-center items-center mx-auto">
@@ -78,7 +80,7 @@ function SearchPage() {
       </div>
 
       <div className="flex justify-end w-4/5">
-        <a href="#" className="text-gray-600 underline font-dm-sands mr-20">
+        <a href="#!" className="text-gray-600 underline font-dm-sands mr-20">
           View All
         </a>
       </div>
