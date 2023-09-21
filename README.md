@@ -9,15 +9,18 @@
 
 [![Contributors][contributors-shield]][contributors-url]
 
-[![GitHub - Luis Rodríguez][Github.logo]][luis-github-url] [![GitHub - Alan Soto][Github.logo]][alan-github-url]
-
 Devs:<br />
 Luis Rodríguez | Alan Soto <br />
+
+[![GitHub - Luis Rodríguez][Github.logo]][luis-github-url] [![GitHub - Alan Soto][Github.logo]][alan-github-url]
+
+[![Contributors][contributors-shield]][contributors-url]
+
 UX: <br />
 Michael Sherrell | Nicola Pfister
 
   <a href="https://github.com/WeisshorNz/L5-Mission05">
-  <img src="./frontend/src/components/assets/images/banner.png" alt="Banner" width="800" height="150">
+  <img src="./frontend/src/components/assets/images/banner.png" alt="Banner" width="200" height="150">
   </a>
 <h3 align="center">Real Estate Website Project</h3>
 
@@ -139,7 +142,7 @@ Luis Rodríguez - luis@missionreadyhq.com
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/WeisshorNz/L5-Mission2.svg?style=for-the-badge
-[contributors-url]: https://github.com/WeisshorNz/L5-Mission2/graphs/contributors
+[contributors-url]: https://github.com/WeisshorNz/L5-Mission05/graphs/contributors
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [Github.logo]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [luis-github-url]: https://github.com/WeisshorNz
