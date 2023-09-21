@@ -20,7 +20,7 @@ UX: <br />
 Michael Sherrell | Nicola Pfister
 
   <a href="https://github.com/WeisshorNz/L5-Mission05">
-  <img src="./frontend/src/components/assets/images/banner.png" alt="Banner" width="200" height="150">
+  <img src="./frontend/src/components/assets/images/banner2.png" alt="Banner" width="800" height="150">
   </a>
 <h3 align="center">Real Estate Website Project</h3>
 
