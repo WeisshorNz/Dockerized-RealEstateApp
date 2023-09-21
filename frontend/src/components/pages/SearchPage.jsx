@@ -64,7 +64,7 @@ function SearchPage() {
       <div className="flex justify-end w-4/5">
         <a
           href="#!"
-          className="mr-20 text-gray-600 underline mt-10 font-dm-sands"
+          className="text-gray-600 underline mt-10 font-dm-sands"
         >
           View All
         </a>
@@ -74,13 +74,13 @@ function SearchPage() {
       {/* <ImageGrid data={filteredData} /> */}
       <HoverOnGrid data={filteredData} />
 
-     
+      
       <div className="flex justify-center items-center mx-auto">
      <Pagination />
       </div>
 
       <div className="flex justify-end w-4/5">
-        <a href="#!" className="text-gray-600 underline font-dm-sands mr-20">
+        <a href="#!" className="text-gray-600 underline font-dm-sands">
           View All
         </a>
       </div>
