@@ -6,46 +6,45 @@ import ImageGrid from "../luisComponents/ImageGrid";
 import Pagination from "../luisComponents/Pagination";
 import { SectionSix } from "../commonComponents/SectionSix";
 import "fontsource-poppins";
+import { useLocation } from "react-router-dom"; // importing useLocation to bring data from HeroMain
 
 function SearchPage() {
   const [filteredData, setFilteredData] = useState([]);
 
+  // use the useLocation hook to access the data from HeroMain
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+
   const [searchOptions, setSearchOptions] = useState({
-    Suburb: null,
-    Type: null,
+    Suburb: searchParams.get("Suburb") || null,
+    Type: searchParams.get("Type") || null,
     Bathrooms: null,
     Carparks: null,
-    Rent: null,
+    Rent: searchParams.get("Rent") || null,
     Rooms: null,
   });
 
   useEffect(() => {
-    // define an async function within the useEffect
     const fetchData = async () => {
       try {
-        // convert the searchOptions object to a query string
         const queryString = new URLSearchParams(
           Object.entries(searchOptions).filter(([_, value]) => value !== null)
         ).toString();
 
-        // fetching data from backend
         const response = await fetch(
           `http://localhost:4001/listing/filtered?${queryString}`
         );
         const data = await response.json();
-        // checking if data is received as an array
         if (Array.isArray(data)) {
           setFilteredData(data);
         } else {
           console.error("Received non-array data:", data);
         }
-        setFilteredData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    // Call the function
     fetchData();
   }, [searchOptions]);
 
@@ -53,11 +52,10 @@ function SearchPage() {
     <div className="bg-white">
       <NavBar />
 
-      <h1 className="sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20">
+      <h1 className="sm:min-w-0 min-w-3xl font-poppins text-5xl font-black leading-10 tracking-wide text-center my-12 mt-20 text-black">
         Search properties to rent
       </h1>
 
-      {/* Pass setSearchOptions as a prop to ExtendedSearchBar */}
       <ExtendedSearchBar setSearchOptions={setSearchOptions} />
       <div className="flex justify-end w-4/5">
         <a
@@ -68,7 +66,6 @@ function SearchPage() {
         </a>
       </div>
 
-      {/* Pass the filteredData as a prop to ImageGrid */}
       <ImageGrid data={filteredData} />
 
       <div className="flex flex-col sm:flex-row justify-between sm:w-2/3 mx-auto sm:ml-80 absolute">

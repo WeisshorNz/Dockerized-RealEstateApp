@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import arrowUp from "../assets/images/Arrow-Up.png";
 import arrowDown from "../assets/images/Arrow-Down.png";
 import HeroBackground from "../assets/images/HeroBackground.png";
+import { useNavigate } from "react-router-dom"; // importing the useNavigate
 
 export const HeroMain = () => {
   const [propertyType, setPropertyType] = useState("");
   const [weeklyRent, setWeeklyRent] = useState("");
+  const [suburb, setSuburb] = useState("");
   const [isPropertyDropdownOpen, setPropertyDropdownOpen] = useState(false);
   const [isRentDropdownOpen, setRentDropdownOpen] = useState(false);
+  const navigate = useNavigate(); // function to call the useNavigate hook.
 
   return (
     <div className="hero grid relative min-h-screen">
@@ -31,8 +34,9 @@ export const HeroMain = () => {
             type="text"
             placeholder="Type an suburb"
             className="bg-white flex-1 p-2 rounded border border-gray-300 w-full lg:w-64 h-10 lg:h-15"
+            value={suburb}
+            onChange={(e) => setSuburb(e.target.value)}
           />
-
           <details
             className="dropdown relative my-0"
             onToggle={(e) => setPropertyDropdownOpen(e.target.open)}
@@ -58,7 +62,6 @@ export const HeroMain = () => {
               ))}
             </ul>
           </details>
-
           <details
             className="dropdown relative my-0"
             onToggle={(e) => setRentDropdownOpen(e.target.open)}
@@ -90,8 +93,23 @@ export const HeroMain = () => {
               ))}
             </ul>
           </details>
-
-          <button className="text-white w-full lg:w-auto flex px-6 lg:px-[40.642px] py-3 lg:py-[15.241px] justify-center items-center space-x-2 lg:space-x-[6.774px] bg-red-700 hover:bg-[#97D9D5] self-center mt-4 lg:mt-0">
+          <button
+            className="text-white w-full lg:w-auto flex px-6 lg:px-[40.642px] py-3 lg:py-[15.241px] justify-center items-center space-x-2 lg:space-x-[6.774px] bg-red-700 hover:bg-[#97D9D5] self-center mt-4 lg:mt-0"
+            onClick={() => {
+              const queryParams = [];
+              if (suburb) queryParams.push(`Suburb=${suburb}`);
+              if (propertyType) queryParams.push(`Type=${propertyType}`);
+              if (weeklyRent)
+                // check if weekly rent is selected, split the selected string to extract the price range and add it
+                queryParams.push(
+                  `Rent=${weeklyRent.split(" ")[0].slice(1)}-${weeklyRent
+                    .split(" ")[2]
+                    .slice(1)}`
+                );
+              // final url to send to SearchPage
+              navigate(`/search?${queryParams.join("&")}`);
+            }}
+          >
             Search
           </button>
         </div>

@@ -55,24 +55,47 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
         </div>
 
         <div className="dropdown dropdown-bottom">
-          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+          <label
+            tabIndex={0}
+            className="text-blue-950 btn btn-ghost rounded-btn"
+          >
             Property Type ▼
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+            className="menu dropdown-content z-[1] p-2 shadow bg-white rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handleTypeSelect("House")}>House</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleTypeSelect("House")}
+              >
+                House
+              </a>
             </li>
             <li>
-              <a onClick={() => handleTypeSelect("Unit")}>Unit</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleTypeSelect("Unit")}
+              >
+                Unit
+              </a>
             </li>
             <li>
-              <a onClick={() => handleTypeSelect("Town House")}>Town House</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleTypeSelect("Town House")}
+              >
+                Town House
+              </a>
             </li>
             <li>
-              <a onClick={() => handleTypeSelect("Apartment")}>Apartment</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleTypeSelect("Apartment")}
+              >
+                Apartment
+              </a>
             </li>
           </ul>
           {/* </div> */}
@@ -84,27 +107,55 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
         </div>
 
         <div className="dropdown dropdown-bottom">
-          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+          <label
+            tabIndex={0}
+            className="text-blue-950 btn btn-ghost rounded-btn"
+          >
             Weekly Rent ▼
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+            className="menu dropdown-content z-[1] p-2 shadow bg-white rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handleRentSelect("$50-$500")}>$50-$500</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleRentSelect("$50-$500")}
+              >
+                $50-$500
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRentSelect("$501-$750")}>$501-$750</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleRentSelect("$501-$750")}
+              >
+                $501-$750
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRentSelect("$751-$1000")}>$751-$1000</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleRentSelect("$751-$1000")}
+              >
+                $751-$1000
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRentSelect("$1001-$2000")}>$1001-$2000</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleRentSelect("$1001-$2000")}
+              >
+                $1001-$2000
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRentSelect("$2000+")}>$2000+</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleRentSelect("$2000+")}
+              >
+                $2000+
+              </a>
             </li>
           </ul>
           {selectedRent && (
@@ -115,30 +166,48 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
         </div>
 
         <div className="dropdown dropdown-bottom">
-          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+          <label
+            tabIndex={0}
+            className="text-blue-950 btn btn-ghost rounded-btn"
+          >
             Bedrooms ▼
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+            className="menu dropdown-content z-[1] p-2 shadow bg-white rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handleRoomsSelect("Any")}>Any</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleRoomsSelect("Any")}
+              >
+                Any
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect(1)}>1+</a>
+              <a className="text-blue-950" onClick={() => handleRoomsSelect(1)}>
+                1+
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect(2)}>2+</a>
+              <a className="text-blue-950" onClick={() => handleRoomsSelect(2)}>
+                2+
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect(3)}>3+</a>
+              <a className="text-blue-950" onClick={() => handleRoomsSelect(3)}>
+                3+
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect(4)}>4+</a>
+              <a className="text-blue-950" onClick={() => handleRoomsSelect(4)}>
+                4+
+              </a>
             </li>
             <li>
-              <a onClick={() => handleRoomsSelect(5)}>5+</a>
+              <a className="text-blue-950" onClick={() => handleRoomsSelect(5)}>
+                5+
+              </a>
             </li>
           </ul>
           {selectedRooms && (
@@ -149,24 +218,47 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
         </div>
 
         <div className="dropdown dropdown-bottom">
-          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+          <label
+            tabIndex={0}
+            className="text-blue-950 btn btn-ghost rounded-btn"
+          >
             Bathrooms ▼
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+            className="menu dropdown-content z-[1] p-2 shadow bg-white rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handleBahtroomsSelect("Any")}>Any</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleBahtroomsSelect("Any")}
+              >
+                Any
+              </a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect(1)}>1+</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleBahtroomsSelect(1)}
+              >
+                1+
+              </a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect(2)}>2+</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleBahtroomsSelect(2)}
+              >
+                2+
+              </a>
             </li>
             <li>
-              <a onClick={() => handleBahtroomsSelect(3)}>3+</a>
+              <a
+                className="text-blue-950"
+                onClick={() => handleBahtroomsSelect(3)}
+              >
+                3+
+              </a>
             </li>
           </ul>
           {selectedBathrooms && (
@@ -177,21 +269,30 @@ const ExtendedSearchBar = ({ setSearchOptions }) => {
         </div>
 
         <div className="dropdown dropdown-bottom">
-          <label tabIndex={0} className="btn btn-ghost rounded-btn">
+          <label
+            tabIndex={0}
+            className="text-blue-950 btn btn-ghost rounded-btn"
+          >
             Carparks ▼
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+            className="menu dropdown-content z-[1] p-2 shadow bg-white rounded-box w-52 mt-4"
           >
             <li>
-              <a onClick={() => handlePetSelect(1)}>1+</a>
+              <a className="text-blue-950" onClick={() => handlePetSelect(1)}>
+                1+
+              </a>
             </li>
             <li>
-              <a onClick={() => handlePetSelect(2)}>2+</a>
+              <a className="text-blue-950" onClick={() => handlePetSelect(2)}>
+                2+
+              </a>
             </li>
             <li>
-              <a onClick={() => handlePetSelect(3)}>3+</a>
+              <a className="text-blue-950" onClick={() => handlePetSelect(3)}>
+                3+
+              </a>
             </li>
           </ul>
           {selectedPet && (
