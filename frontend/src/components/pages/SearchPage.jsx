@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavBar } from "../commonComponents/NavBar";
 import { FooterS } from "../commonComponents/FooterS";
 import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
-import ImageGrid from "../luisComponents/ImageGrid";
+// import ImageGrid from "../luisComponents/ImageGrid";
+import { HoverOnGrid } from "../luisComponents/HoverOnGrid";
 import Pagination from "../luisComponents/Pagination";
 import { SectionSix } from "../commonComponents/SectionSix";
 import "fontsource-poppins";
@@ -57,27 +58,27 @@ function SearchPage() {
       </h1>
 
       <ExtendedSearchBar setSearchOptions={setSearchOptions} />
+
       <div className="flex justify-end w-4/5">
-        <a
-          href="#"
-          className="mr-20 text-gray-600 underline mt-10 font-dm-sands"
-        >
+        <a href="#!" className="text-gray-600 underline mt-10 font-dm-sands">
           View All
         </a>
       </div>
 
-      <ImageGrid data={filteredData} />
+      {/* Pass the filteredData as a prop to ImageGrid */}
+      {/* <ImageGrid data={filteredData} /> */}
+      <HoverOnGrid data={filteredData} />
 
-      <div className="flex flex-col sm:flex-row justify-between sm:w-2/3 mx-auto sm:ml-80 absolute">
-        <div className="flex justify-center items-center sm:ml-72">
-          <Pagination />
-        </div>
-        <div className="flex justify-center items-center mt-4 sm:mt-0 sm:ml-12">
-          <a href="#" className="text-gray-600 underline font-dm-sands">
-            View All
-          </a>
-        </div>
+      <div className="flex justify-center items-center mx-auto">
+        <Pagination />
       </div>
+
+      <div className="flex justify-end w-4/5">
+        <a href="#!" className="text-gray-600 underline font-dm-sands">
+          View All
+        </a>
+      </div>
+
       <SectionSix />
       <FooterS />
     </div>
