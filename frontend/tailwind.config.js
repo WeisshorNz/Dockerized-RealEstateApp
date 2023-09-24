@@ -14,6 +14,7 @@ module.exports = {
       },
       fontSize: {
         dream: "240.345px",
+        "dream-mobile": "160px", //
       },
       letterSpacing: {
         "dream-tight": "-4.807px",

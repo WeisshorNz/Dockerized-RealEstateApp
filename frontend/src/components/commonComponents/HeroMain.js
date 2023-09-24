@@ -15,18 +15,20 @@ export const HeroMain = () => {
   return (
     <div className="hero grid relative min-h-screen">
       <div
-        className="absolute inset-0 bg-center bg-cover opacity-70"
+        className="absolute inset-0 bg-center bg-cover"
         style={{ backgroundImage: `url(${HeroBackground})` }}
-      ></div>
+      >
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
 
       <div className="text-center z-10 px-4 lg:px-0 space-y-4 lg:space-y-8 place-self-center">
         <h1 className="font-poppins text-4xl lg:text-8xl font-extrabold leading-tight tracking-tighter text-white">
           Getting you into your
         </h1>
 
-        <h2 className="relative flex flex-col items-center text-white font-normal leading-none tracking-dream-tight text-dream w-full lg:w-910 font-better-yesterday">
+        <h2 className="relative flex flex-col items-center text-white font-normal leading-none tracking-dream-tight w-full lg:w-910 font-better-yesterday text-dream-mobile md:text-dream">
           dream rental
-          <div className="absolute bottom-[4.9rem] lg:h-[2px] w-3/4 lg:w-590 border-b-4 border-white"></div>
+          <div className="absolute bottom-[3rem] md:bottom-[4.9rem] lg:h-[2px] w-full lg:w-590 border-b-4 border-white"></div>
         </h2>
 
         <div className="bg-white inline-flex flex-col lg:flex-row p-4 lg:p-[26px] lg:px-[32px] items-center space-y-4 lg:space-x-4 lg:space-y-0 rounded">

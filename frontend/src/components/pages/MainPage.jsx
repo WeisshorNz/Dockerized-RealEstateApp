@@ -10,7 +10,7 @@ import { SectionSix } from "../commonComponents/SectionSix";
 
 export const MainPage = () => {
   return (
-    <div>
+    <div className="bg-white">
       <NavBar />
       <HeroMain />
       <SectionTwo />
