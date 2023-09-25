@@ -19,7 +19,7 @@ services:
     environment:
       PORT: "4001"
       MONGODB_URI: "mongodb://mongo:27017" 
-      DB_NAME: "Docker"
+      DB_NAME: "M5"
     networks:
       - M5Network
 

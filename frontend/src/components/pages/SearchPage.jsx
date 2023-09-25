@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { NavBar } from "../commonComponents/NavBar";
 import { FooterS } from "../commonComponents/FooterS";
 import ExtendedSearchBar from "../commonComponents/ExtendedSearchBar";
-// import ImageGrid from "../luisComponents/ImageGrid";
 import { HoverOnGrid } from "../luisComponents/HoverOnGrid";
 import Pagination from "../luisComponents/Pagination";
 import { SectionSix } from "../commonComponents/SectionSix";
@@ -66,9 +65,8 @@ function SearchPage() {
       </div>
 
       {/* Pass the filteredData as a prop to ImageGrid */}
-      {/* <ImageGrid data={filteredData} /> */}
       <HoverOnGrid data={filteredData} />
-
+     
       <div className="flex justify-center items-center mx-auto">
         <Pagination />
       </div>
