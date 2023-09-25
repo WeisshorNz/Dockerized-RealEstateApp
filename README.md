@@ -147,7 +147,11 @@ Luis Rodríguez - luis@missionreadyhq.com
 [Github.logo]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [luis-github-url]: https://github.com/WeisshorNz
 [alan-github-url]: https://github.com/AlanISoto
+
 [luis-linkedin-url]: www.linkedin.com/in/luis-rodríguez-4b4678290
+
+[luis-linkedin-url]:  https://www.linkedin.com/in/luis-rodríguez-4b4678290
+
 [alan-linkedin-url]: https://www.linkedin.com/in/alan-ivan-soto-871630224/
 [michael-linkedin-url]: https://www.linkedin.com/in/michael-sherrell-37402250/
 [nicola-linkedin-url]: https://www.linkedin.com/in/nicola-pfister/
@@ -159,4 +163,8 @@ Luis Rodríguez - luis@missionreadyhq.com
 [Azure-url]: https://azure.microsoft.com/en-us
 [Azure.logo]: https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
+
 [MongoDB.logo]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+
+[MongoDB.logo]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+
