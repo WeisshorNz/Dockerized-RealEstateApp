@@ -1,11 +1,19 @@
-version: '3'
+version: "3"
 services:
   mongo:
     image: mongo
     ports:
-      - "27017:27017" 
+      - "27017:27017"
     volumes:
-      - mongo-data:/data/db 
+      - mongo-data:/data/db
+    networks:
+      - M5Network
+
+  mongo-seed:
+    build:
+      context: ./mongo-seed
+    depends_on:
+      - mongo
     networks:
       - M5Network
 
@@ -13,12 +21,12 @@ services:
     build:
       context: ./backend
     ports:
-      - "4001:4001" 
+      - "4001:4001"
     depends_on:
-      - mongo  
+      - mongo
     environment:
       PORT: "4001"
-      MONGODB_URI: "mongodb://mongo:27017" 
+      MONGODB_URI: "mongodb://mongo:27017"
       DB_NAME: "M5"
     networks:
       - M5Network
@@ -27,7 +35,7 @@ services:
     build:
       context: ./frontend
     ports:
-      - "3000:3000"  
+      - "3000:3000"
     depends_on:
       - backend
     networks:
