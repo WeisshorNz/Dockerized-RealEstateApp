@@ -1,15 +1,35 @@
 const createError = require("http-errors");
 const mongoose = require("mongoose");
 const Message = require("../Models/messageModel");
+const Listing = require("../Models/listingModel");
 
 module.exports = {
   getAllMessages: async (req, res, next) => {
     try {
-      const results = await Message.find({}, { __v: 0 });
+      // const results = await Message.find({}, { __v: 0 });
+      const results = await Listing.find({});
       res.send(results);
     } catch (error) {
       console.error(error.message);
       next(error);
+    }
+  },
+
+  findListingByRooms: async (req, res, next) => {
+    const Rooms = req.params.Rooms;
+    try {
+      const listing = await Listing.findByRooms(Rooms);
+      if (!listing) {
+        throw createError(404, "That listing does not exist in the database.");
+      }
+      res.send(listing);
+    } catch (error) {
+      console.error(error.message);
+      if (error instanceof mongoose.CastError) {
+        next(createError(400, "Invalid listing"));
+      } else {
+        next(error);
+      }
     }
   },
 

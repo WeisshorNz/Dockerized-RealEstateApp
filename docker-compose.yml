@@ -6,6 +6,8 @@ services:
       - "27017:27017" 
     volumes:
       - mongo-data:/data/db 
+    networks:
+      - M5Network
 
   backend:
     build:
@@ -15,9 +17,11 @@ services:
     depends_on:
       - mongo  
     environment:
-       PORT: "4001"
-       MONGODB_URI: "mongodb://mongo:27017" 
-       DB_NAME: "Docker"
+      PORT: "4001"
+      MONGODB_URI: "mongodb://mongo:27017" 
+      DB_NAME: "M5"
+    networks:
+      - M5Network
 
   frontend:
     build:
@@ -25,7 +29,12 @@ services:
     ports:
       - "3000:3000"  
     depends_on:
-      - backend  
+      - backend
+    networks:
+      - M5Network
 
 volumes:
-  mongo-data:  
+  mongo-data:
+
+networks:
+  M5Network:

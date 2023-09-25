@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const messageController = require("../Controllers/messageController");
+const listingController = require("../Controllers/listingController");
 
 //Create a new message
 router.post("/", messageController.createNewMessage);
@@ -17,5 +18,11 @@ router.get("/", messageController.getAllMessages);
 
 //Get a specific message by id
 router.get("/:id", messageController.findMessageById);
+
+//List all listings in database
+router.get("/", listingController.getAllListings);
+
+//Get a specific listing by Bedrooms
+router.get("/:Rooms", listingController.findListingByRooms);
 
 module.exports = router;

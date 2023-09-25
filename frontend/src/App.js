@@ -1,33 +1,26 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
-=======
-// src/App.js
 import React from "react";
-import MessageForm from "./components/MessageForm";
->>>>>>> development
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MainPage } from "./components/pages/MainPage";
+import SearchPage from "./components/pages/SearchPage";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faBed, faBath, faCar } from "@fortawesome/free-solid-svg-icons";
+
+// Icons for listings cards
+library.add(faHeart);
+library.add(faBed);
+library.add(faBath);
+library.add(faCar);
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-=======
-      <MessageForm />
->>>>>>> development
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />}></Route>
+          <Route path="/search" element={<SearchPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

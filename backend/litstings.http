@@ -1,0 +1,6 @@
+### get all listings in database
+GET http://localhost:4001/listing
+
+### get listings by Rooms
+GET http://localhost:4001/listing/3
+
