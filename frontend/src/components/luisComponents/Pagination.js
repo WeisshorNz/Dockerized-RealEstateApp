@@ -6,7 +6,10 @@ export default function Pagination() {
       <nav aria-label="Page navigation example">
         <ul class="list-style-none flex gap-2">
           <li>
-            <a class="pointer-events-none relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400 text-xl mt-[-5px]">
+            <a
+              class="pointer-events-none relative block rounded-full bg-transparent px-3 py-1.5 text-neutral-500 transition-all duration-300 dark:text-neutral-400 text-xl mt-[-5px]"
+              href="#!"
+            >
               «
             </a>
           </li>
@@ -56,7 +59,7 @@ export default function Pagination() {
           </li>
           <li>
             <a
-              class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-black text-xl mt-[-5px]"
+              class="relative block rounded-full bg-transparent px-3 py-1.5 text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-black text-xl mt-[-5px]"
               href="#!"
             >
               »
