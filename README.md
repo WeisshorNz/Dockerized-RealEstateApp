@@ -77,6 +77,7 @@ Responsive Design: We paid special attention to the user experience across all d
 - [![MongoDB][MongoDB.logo]][MongoDB-url]
 - [![Node.js][Node.js.logo]][Nodejs-url]
 - [![React][React.js]][React-url]
+- [![Docker][Docker.logo]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,8 +164,7 @@ Luis Rodríguez - luis@missionreadyhq.com
 [Azure-url]: https://azure.microsoft.com/en-us
 [Azure.logo]: https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
-
 [MongoDB.logo]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
-
-[MongoDB.logo]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[Docker.logo]:https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]:https://www.docker.com/
 
